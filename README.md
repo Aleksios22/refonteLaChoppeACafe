@@ -1,6 +1,6 @@
 ﻿# refonteLaChoppeACafe
  
-Refonte du site web de La Choppe À Café.
+Refonte fictive du site web de La Choppe À Café.
 
 Réaliser fin 2019 dans le cadre d'un cours de design web.
 
