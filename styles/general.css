@@ -1,0 +1,1208 @@
+/*---------------------------------------------------------------------------*/
+/*------------------------------ MOBILE FIRST  ------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+/*------------------STYLES GÉNÉRAUX--------------------*/
+
+* {
+    margin: 0;
+    /* font-family: 'Noto Serif', serif; */
+    font-family: 'Poppins', sans-serif;
+    background: no-repeat;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+#global {
+    width: 100vw;
+
+    /* FLEX */
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: 1em;
+    color: #000000;
+}
+
+li {
+    color: #ffffff
+}
+
+/*---------------PALETTE DE COULEURS------------------*/
+
+
+/* ROUGE :          #E50000 */
+/* ROUGE (foncé) :  #B70000 */
+
+/* VERT :           #00CE00 */
+
+/* GRIS :           #7E7E7E */
+/* GRIS (pale) :    #A8A8A8 */
+
+/* BLANC :          #ffffff */
+
+/* NOIR :           #000000 */
+
+
+
+/*---------------------POLICES ---------------------*/
+
+/* font-family: 'Noto Serif', serif; */
+/* font-family: 'Poppins', sans-serif; */
+
+/*SCRIPTS*/
+/* font-family: 'Permanent Marker', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Damion', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Alex Brush', cursive; */
+
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*-------------------------------BARRE ROUGE MOBILE--------------------------------*/
+
+.barreDuHaut {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    z-index: 999;
+
+    background: -moz-linear-gradient(top, #E50000 34%, #B70000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #E50000 34%,#B70000 100%); /* Chrome10-25,Safari5.1-6 */
+    white-space: nowrap;
+    box-shadow: 0 8px 6px -6px rgb(61, 61, 61);
+
+    /*Propriété flex*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.btnPanier {
+    width: 20%;
+
+    /* BOX */
+    border-right: 1.5px #B70000 solid;
+
+    /*Propriété flex*/
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.panier {
+    width: 40%;
+    display: inline-block;
+
+    font-family: 'Arimo', sans-serif;
+    font-size: 100%;
+    color: white;
+    cursor: pointer;
+
+    /* BOX */
+    padding: 15% 0% 15% 15%;
+}
+
+.panier:nth-child(2) {
+    /* BOX */
+    padding-left: 10%;
+    padding-top: 25%;
+}
+
+.btnPanier:hover {
+    background-color: #B70000;
+}
+
+
+.btn-menu-burger {
+    width: 20%;
+
+    cursor: pointer;
+
+    /* BOX */
+    border-left: 1.5px #B70000 solid;
+
+    /*Propriété flex*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-menu-burger:hover {
+    background-color: #B70000;
+}
+
+/* --------- MENU BURGER  -------------*/
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    
+    background-color: #ffffff;
+    transition: 0.4s;
+
+    /* BOX */
+    margin: 6px 0;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------MENU NAVIGATION---------------------------------*/
+
+
+.menu-mobile {
+    width: 100%;
+    height: 95vh;
+    z-index: 10;
+    position: fixed;
+    display: none;
+
+    transform: translateY(-100);
+}
+
+.Navsections {
+    background-color: rgb(207, 0, 0);
+
+    /* BOX */
+    border: #E50000 1px solid;
+}
+
+.liste {
+    width: 90%;
+
+    list-style: none;
+    text-align: center;
+    font-size: 110%;
+
+    /* BOX */
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+.liste li {
+    width: 100%;
+    height: 9vh;
+
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    /* box */
+    padding: 4.5% 0% 4.5% 0%;
+    border-bottom: #B70000 1px solid;
+}
+
+.liste li:nth-child(3) {
+    letter-spacing: 2.5px;
+}
+
+.liste li:nth-child(4) {
+    letter-spacing: 2px;
+}
+
+.liste li:nth-child(5) {
+    letter-spacing: 0.5px;
+}
+
+.liste li:nth-child(6) {
+    border-bottom: #ad020200 0px solid;
+}
+
+
+.liste li:hover {
+    width: 100%;
+
+    background-color: #D63232;
+}
+
+.petitLogo {
+    width: 23vh;
+
+    cursor: pointer;
+
+    /* BOX */
+    margin: 15% 0% 10% 0%;
+}
+
+.loupe {
+    width: 7vh;
+
+    cursor: pointer;
+
+    /*BOX*/
+    margin-bottom: 5%;
+}
+
+.btnSocial {
+    width: 9vh;
+
+    cursor: pointer;
+
+    /* BOX */
+    margin-top: 0%;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btnSocial img {
+    width: 7vh;
+
+    /*BOX*/
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*------------------------------------- ENTETE-------------------------------------*/
+
+
+header {
+    height: 85vh;
+
+    background-image: url("../images/grinder1-gradient.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* FLEX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.OfficielLogo {
+    width: 60vw;
+
+    /* BOX */
+    margin-top: 10vh;
+}
+
+.slogan {
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    color: #E50000;
+    text-align: center;
+    font-size: 1.6em;
+    margin-top: 2%;
+}
+
+.fleche {
+    width: 10vw;
+
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*----------------------------------  SECTION 1  ----------------------------------*/
+
+
+.section1 {
+    width: 100vw;
+    height: 120vh;
+
+    background-image: url(../images/background-caffeier.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+
+
+    /* FLEX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    width: 75%;
+
+    color: #000000;
+    font-size: 1.7em;
+    text-align: center;
+    font-weight: 700;
+
+    /* BOX */
+    margin-top: 10%;
+    border-bottom: #E50000 1px solid;
+    border-top: #E50000 1px solid;
+    padding: 5%;
+}
+
+.icones {
+    width: 80%;
+
+    /*BOX*/
+    padding: 9% 0% 9% 0%;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icones img {
+    width: 12vw;
+
+    /*BOX*/
+    padding: 0% 3% 0% 3%;
+}
+
+.service {
+    font-size: 1.5em;
+    text-align: center;
+
+    /*BOX*/ 
+    margin-top: 10%
+}
+
+.presentation {
+    width: 80%;
+
+    text-align: center;
+    font-size: 1.2em;
+}
+
+
+
+/*----------- BTN PRODUITS------------*/
+
+  
+  /*
+  =======
+  SETTINGS
+  =======
+  */
+  
+.section1 .btn, .section1 .draw-border {
+    width: 220px;
+
+    --buttonTextColor: #B70000;
+    --buttonBorderColor: #E50000;
+    --buttonBorderWidth: 3px;
+    --buttonHoverTextColor: #E50000;
+    --buttonHoverBorderColor: #7E7E7E;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+
+    /*BOX*/
+    margin-top: 5px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  
+.draw-border{
+    --uiButtonTextColor: var(--buttonTextColor);
+    --uiButtonBorderWidth: var(--buttonBorderWidth, 4px);
+    --uiButtonBorderColor: var(--buttonBorderColor);
+    --uiButtonHoverTextColor: var(--buttonHoverTextColor);
+    --uiButtonHoverBorderColor: var(--buttonHoverBorderColor);
+    
+    box-shadow: inset 0 0 0 var(--uiButtonBorderWidth) var(--uiButtonBorderColor);
+    color: var(--uiButtonTextColor);
+    transition: color .25s .08333333s, font-size .25s .08333333s;
+    position: relative;
+  }
+  
+  .draw-border::before,
+  .draw-border::after{
+    content: '';  
+  
+    box-sizing: border-box;	
+    width: 0;
+    height: 0;
+    border: 0 solid var(--uiButtonBorderColor);
+      
+    pointer-events: none;
+    transition-property: border-color, width, height;
+    transition-duration: .25s; /* .25s for border-color, .25s for width, .25s for height */
+      
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .draw-border::before{
+    border-bottom-width: var(--uiButtonBorderWidth);
+    border-left-width: var(--uiButtonBorderWidth);
+      /* A bottom border of button have to be hidden through 0.25s so I use the 0.25s value as the second argument */
+    transition-delay: .35s, .25s, 0s; /* .35s for border-color, .25s for width, 0s for height */
+  }
+  
+  .draw-border::after{
+    border-top-width: var(--uiButtonBorderWidth);
+    border-right-width: var(--uiButtonBorderWidth);
+      /* A right border of button have to be hidden through 0.25s so I use the 0.25s value as the third argument */
+    transition-delay: .35s, 0s, .25s; /* .35s for border-color, 0s for width, .25s for height */
+  }
+  
+  .draw-border:hover{
+    color: var(--uiButtonHoverTextColor);
+    font-size: 1.2em;
+  }
+  
+  .draw-border:hover::before, 
+  .draw-border:hover::after{
+    width: 100%;
+    height: 100%;
+    border-color: var(--uiButtonHoverBorderColor);
+      
+      /* Changing border color don't have to be smooth so I use the 0s value as the first argument */
+      transition-duration: 0s, .25s, .25s; /* 0s for border-color, .25s for width, .25s for height */
+  }
+  
+  .draw-border:hover::before{
+      /* A left border of button have to be showed through 0.25s so I use the 0.25s value as the third argument */
+      transition-delay: 0s, 0s, .25s; /* 0s for border-color, 0s for width, .25s for height */
+  }
+  
+  .draw-border:hover::after{
+      /* A top border of button have to be showed through 0.25s so I use the 0.25s value as the second argument */
+    transition-delay: 0s, .25s, 0s; /* 0s for border-color, .25s for width, 0s for height */
+  }
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+  /*---------------------------------  SECTION 2 ----------------------------------*/
+
+  .section2 {
+    width: 100%;
+    height: 40vh;
+
+
+    /* FLEX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service2 {
+    width: 80%;
+    z-index: 0;
+
+    font-size: 1.2em;
+    text-align: center;
+
+    /*BOX*/
+    margin: 5% 0% 22% 0%;
+    padding: 3%;
+}
+
+.container {
+    width: 100vw;
+
+    /*BOX*/
+    margin-top: 0%;
+    padding: 0;
+    border: #B70000 3px solid;
+}
+
+.carousel-inner {
+    background-color: #B70000;
+   -webkit-box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.75);
+}
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*--------------------------------  SECTION 3  ------------------------------------*/
+
+
+.section3 {
+    width: 100vw;
+    height: 90vh;
+
+    background-image: url(../images/cafeier-news-background.png);
+    background-size: 100%;
+    background-position-y: 100%;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section3 .nouveaute {
+    font-size: 1.4em;
+}
+
+.nouvelle {
+    min-width: 75%;
+    height: 40%;
+    
+    background-image: url(../images/vins_news.jpg);
+    background-size: cover;
+    cursor: pointer;
+
+    /*BOX*/
+    margin-top: 5%;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: #B70000 3px solid;
+}
+
+.section3 .btn, .section3 .draw-border {
+    width: 220px;
+
+    --buttonTextColor: #B70000;
+    --buttonBorderColor: #E50000;
+    --buttonBorderWidth: 3px;
+    --buttonHoverTextColor: #E50000;
+    --buttonHoverBorderColor: #7E7E7E;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+
+    /*BOX*/
+    margin-top: 5%;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  
+.draw-border{
+    --uiButtonTextColor: var(--buttonTextColor);
+    --uiButtonBorderWidth: var(--buttonBorderWidth, 4px);
+    --uiButtonBorderColor: var(--buttonBorderColor);
+    --uiButtonHoverTextColor: var(--buttonHoverTextColor);
+    --uiButtonHoverBorderColor: var(--buttonHoverBorderColor);
+    
+    box-shadow: inset 0 0 0 var(--uiButtonBorderWidth) var(--uiButtonBorderColor);
+    color: var(--uiButtonTextColor);
+    transition: color .25s .08333333s, font-size .25s .08333333s;
+    position: relative;
+  }
+
+
+/*---------------------------------------------------------------------------------*/
+/*----------------------------------  FOOTER   ------------------------------------*/
+
+
+footer {
+    width: 100vw;
+    height: 75vh;
+
+    background-image: url(../images/grains-drop-background.jpg);
+    background-size: 150%;
+    background-position-x: 50%;
+    background-position-y: 100%;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+blockquote {
+    width: 100vw;
+
+    color: white;
+    text-decoration: none;
+    font-size: 1.15em;  
+
+    /*BOX*/
+    padding: 8% 8% 0% 8%;
+}
+
+.button3 {
+    display: inline-block;
+
+    background-color: rgb(56, 151, 59); /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    /*BOX*/
+    padding: 10px 32px;
+    margin: 0px 2px 10px 4px;
+    border: none;
+  }
+
+.button3 img {
+    width: 27px;
+
+    /*BOX*/
+    margin-right: 6px;
+}
+
+footer .btnSocial img {
+    width: 55px;
+    height: 55px;
+
+    /*BOX*/
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------------ ADAPTABILITÉ POUR TABLETTE  ------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*-------------------------------BARRE ROUGE TABLETTE--------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+        .barreDuHaut {
+            height: 50px;
+        }
+
+        .btnPanier {
+            width: 15%;
+        
+            /* BOX */
+            padding-left: 9px;
+        }
+
+        .panier {
+            width: 45%;
+        
+            font-size: 100%;    
+        
+            /* BOX */
+            padding: 15% 0% 15% 20%;
+        }
+
+
+
+
+
+
+    /*---------------------------------------------------------------------------------*/
+    /*---------------------------------MENU NAVIGATION---------------------------------*/
+
+
+    .liste {
+        width: 80%;
+        height: 95vh;
+
+        font-size: 100%;
+
+    }
+
+    .liste li {
+        width: 100%;
+        height: 9vh;
+
+        font-size: 95%;
+
+        /* box */
+        padding: 2% 0% 2% 0%;
+    }
+
+    .petitLogo {
+        width: 20vh;
+
+        /* BOX */
+        margin: 18% 0% 10% 0%;
+    }
+
+    .loupe {
+        width: 4vh;
+
+        /*BOX*/
+        margin-bottom: 2%;
+    }
+
+    .btnSocial {
+        width: 9vw;
+
+    }
+
+    .btnSocial img {
+        height: 6vh;
+    }
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*------------------------------------- ENTETE-------------------------------------*/
+
+
+header {
+    height: 90vh;
+
+    background-position-y: -35px;
+}
+
+.OfficielLogo {
+    width: 30vw;
+
+    /* BOX */
+    margin-top: 15vh;
+}
+
+.slogan {
+    font-size: 1.5em;
+    margin-top: -4%;
+}
+
+.fleche {
+    width: 8vw;
+
+    transform: translateY(-20px);
+}
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*----------------------------------  SECTION 1  ----------------------------------*/
+
+
+.section1 {
+    width: 100vw;
+    height: 120vh;
+
+    background-image: url(../images/background-caffeier.jpg);
+    background-size: 102%;
+    background-position: center;
+    background-position-y: -450px;
+    background-repeat: no-repeat;   
+}
+
+h3 {
+    width: 50%;
+
+    font-size: 1.7em;
+    text-align: center;
+    font-weight: 700;
+
+    /* BOX */
+    margin-top: 0%;
+    padding: 2.5%;
+}
+
+.service {
+    font-size: 1.4em;
+
+    /*BOX*/ 
+    margin-top: 4%
+}
+
+.icones {
+
+    /*BOX*/
+    padding: 4% 0% 4% 0%;
+}
+
+.icones img {
+    width: 9.5vw;
+
+    /*BOX*/
+    padding: 0% 3% 0% 3%;
+}
+
+/*---------------------------------------------------------------------------------*/
+  /*---------------------------------  SECTION 2 ----------------------------------*/
+
+  .section2 {
+    width: 100%;
+    height: 84vh;
+
+
+    /* FLEX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service2 {
+    width: 80%;
+    z-index: 0;
+
+    font-size: 1.2em;
+    text-align: center;
+
+    /*BOX*/
+    margin: 5% 0% 30% 0%;
+    padding: 3%;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*--------------------------------  SECTION 3  ------------------------------------*/
+
+
+.section3 {
+    width: 100vw;
+    height: 120vh;
+
+    background-position-y: 100%;
+}
+
+.section3 .btn, .section3 .draw-border {
+    width: 220px;
+
+    /*BOX*/
+    margin-top: 5%;
+    margin-bottom: 30px;
+  }
+
+  .nouvelle {
+    min-width: 70%;
+    height: 55%;
+
+}
+
+/*---------------------------------------------------------------------------------*/
+/*----------------------------------  FOOTER   ------------------------------------*/
+
+
+footer {
+    height: 90vh;
+    background-position-y: 85%;
+}
+
+blockquote {
+    padding-top: 30px; 
+    padding-bottom: 20px;
+}
+
+.button3 {
+    margin-bottom: 25px;
+}
+
+footer .btnSocial {
+    margin-bottom: 15px;
+}
+
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------------ ADAPTABILITÉ POUR DESKTOP  ------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+
+
+
+@media only screen and (min-width: 1024px) {
+
+
+    
+/*---------------------------------------------------------------------------------*/
+/*-------------------------------BARRE ROUGE DESKTOP--------------------------------*/
+
+.panier  {
+    width: 37%;
+    padding-left: 80px;
+    padding-right: 0;
+}
+
+.Navsections li {
+    font-size: 1.5em;
+}
+
+.loupe {
+    width: 4vh;
+
+    /*BOX*/
+    margin-bottom: 1%;
+}
+
+.liste {
+    width: 85%;
+
+    font-size: 70%;
+
+    /* BOX */
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+.liste li {
+    width: 100%;
+    height: 4vh;
+    font-size: 2em;
+
+
+    /* box */
+    padding: 2% 0% 3% 0%;
+    border-bottom: #B70000 1px solid;
+}
+
+    /*---------------------------------------------------------------------------------*/
+/*------------------------------------- ENTETE-------------------------------------*/
+
+
+header {
+    height: 100vh;
+
+    background-image: url("../images/images/grinder3.gif");
+    background-position-y: -300px;
+}
+
+.OfficielLogo {
+    width: 22vw;
+}
+
+.panier:nth-child(2) {
+    font-size: 1.3em;
+    /* BOX */
+    padding-left: 5%;
+    padding-top: 20%;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*----------------------------------  SECTION 1  ----------------------------------*/
+
+
+.section1 {
+    width: 100vw;
+    height: 150vh;
+
+    background-image: url(../images/background-caffeier.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    background-position-y: -950px;
+}
+
+h2 {
+    transform: translateY(-110px);
+
+    /*BOX*/
+    margin-top: 0;
+}
+
+.fleche {
+    width: 5%;
+
+    vertical-align: top;
+
+    /*BOX*/
+    margin-top: 0;
+}
+
+.section1 h3 {
+    font-size: 2em;
+
+    /*BOX*/
+    margin-top: 2%;
+    padding: 3% 0% 3% 0%;
+}
+
+.service {
+    font-size: 1.7em;
+
+    /*BOX*/
+    margin-top: 2%;
+}
+
+.icones {
+    padding: 3% 0% 3% 0%;
+}
+
+.icones img {
+    width: 8vw;
+}
+
+.section1 p:nth-of-type(2) {
+    font-size: 1.5em;
+
+    /*BOX*/
+    margin-bottom: 5%;
+    margin-top: 3%; 
+}
+
+.section1 .btn, .section1 .draw-border {
+    width: 300px;
+    height: 20vh;
+
+    --buttonTextColor: #B70000;
+    --buttonBorderColor: #E50000;
+    --buttonBorderWidth: 3px;
+    --buttonHoverTextColor: #E50000;
+    --buttonHoverBorderColor: #7E7E7E;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em; 
+
+    /*BOX*/
+    margin-top: 1%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .section1  .draw-border:hover{
+    color: var(--uiButtonHoverTextColor);
+    font-size: 1.4em;
+  }
+
+  .section1 .service2 {
+    width: 50vw;
+
+      font-size: 1.8em;
+
+      /*BOX*/
+      margin-top: 5%;
+  }
+
+
+
+  /*---------------------------------------------------------------------------------*/
+  /*---------------------------------  SECTION 2 ----------------------------------*/
+
+  .section2 {
+    width: 100%;
+    height: 100vh;
+
+
+    /* FLEX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .container .carousel-inner {
+      height: 85vh;
+      margin-top: 2%;
+  }
+
+  .container {
+    height: 70vh;
+    background-color: #B70000;
+   -webkit-box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 25px -5px rgba(0,0,0,0.75);
+  }
+
+  .container .carousel-inner div img {
+      transform: translateY(-8%)
+  }
+
+  .section2 .btn, .section2 .draw-border {
+    width: 300px;
+    height: 20vh;
+
+    /*BOX*/
+    margin-top: 1%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+    /*---------------------------------------------------------------------------------*/
+  /*---------------------------------  SECTION 3 ----------------------------------*/
+
+  .section3 {
+      height: 135vh;
+  }
+
+  .section3 .btn, .section3 .draw-border {
+    width: 300px;
+    height: 13vh;
+
+    font-size: 1.2em;   
+
+      /*BOX*/
+    margin-top: 1%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .section3  .draw-border:hover{
+    font-size: 1.4em;
+  }
+
+  .nouveaute {
+    width: 50%;
+
+      /*BOX*/
+      margin-top: 5%;
+      padding:3%;
+  }
+
+  .nouvelle {
+    min-width: 60%;
+    height: 40%;
+
+    /*BOX*/
+    margin-top: 5%;
+  }
+
+
+
+
+  /*---------------------------------------------------------------------------------*/
+/*----------------------------------  FOOTER   ------------------------------------*/
+
+
+footer {
+    width: 100vw;
+    height: 70vh;
+
+    background-image: url(../images/grains-drop-background.jpg);
+    background-size: 150%;
+    background-position-x: 50%;
+    background-position-y: 100%;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+blockquote {
+    padding: 20px 0 20px 0;
+}
+
+
+}

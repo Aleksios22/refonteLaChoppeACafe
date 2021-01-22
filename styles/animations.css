@@ -1,0 +1,132 @@
+.menu-mobile-descente {
+    width: 100%;
+    height: 95vh;
+    position: fixed;
+    z-index: 995;
+
+    background-color: hsla(0, 81%, 48%, 1);
+    transform: translateY(5vh);
+    opacity: 0.97;
+
+    /*FLEX*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*ANIM*/
+    animation-name: descenteMenu;
+    animation-duration: 1s;
+}
+
+@keyframes descenteMenu {
+    0% {
+
+        transform: translateY(-100vh);
+    }
+    100% {
+
+        transform: translateY(5vh);
+
+    }
+}
+
+.OfficielLogoAnim {
+    width: 60vw;
+
+    transform: translateY(-70vh);
+
+    /*ANIM*/
+    animation-name: OfficielLogoAnim;
+    animation-duration: 1s;
+
+    /*BOX*/
+    margin-top: 10vh;
+}
+
+@keyframes OfficielLogoAnim {
+    0% {
+        transform: translateY(-0);
+    }
+    100% {
+
+        transform: translateY(-70vh);
+
+    }
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------------ ADAPTABILITÉ POUR TABLETTE  ------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------------*/
+/*-------------------------------BARRE ROUGE MOBILE--------------------------------*/
+
+@media only screen and (min-width: 768px) {
+    .menu-mobile-descente {
+        width: 100%;
+        position: fixed;
+        z-index: 995;
+    
+        background-color: hsla(0, 81%, 48%, 1);
+        transform: translateY(5vh);
+        opacity: 0.97;
+    
+        /*FLEX*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        /*ANIM*/
+        animation-name: descenteMenu;
+        animation-duration: 1s;
+    }
+
+    .OfficielLogoAnim {
+        width: 30vw;
+    
+        transform: translateY(-70vh);
+    
+        /*ANIM*/
+        animation-name: OfficielLogoAnim;
+        animation-duration: 1s;
+    
+        /*BOX*/
+        margin-top: 15vh;
+    }
+
+    @keyframes OfficielLogoAnim {
+    0% {
+        transform: translateY(-0);
+    }
+    100% {
+
+        transform: translateY(-70vh);
+
+    }
+}
+
+
+} 
+
+
+
+
+/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------------ ADAPTABILITÉ POUR DESKTOP  ------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 1024px) {
+    .OfficielLogoAnim {
+        width: 22vw;
+    }
+
+}
